@@ -20,14 +20,4 @@ export class AppComponent {
   ) {
     this.items = mfs.getMessages();
   }
-
-  submit() {
-    const msg = {
-      id: null,
-      body: this.message,
-      timestamp: + new Date(),
-      sender: 'JANEK'
-    };
-    this.mfs.addMessage(new Message(msg)).subscribe(console.log);
-  }
 }

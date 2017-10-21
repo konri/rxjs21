@@ -26,7 +26,13 @@ export class MessageFormComponent implements OnInit {
   public submitForm() {
     if (this.form.valid) {
       console.log(this.form);
-      const message: Message = new Message(environment.user, this.form.value.body, new Date().getTime());
+      const msg = {
+        id: null,
+        body: this.form.value.body,
+        timestamp: + new Date(),
+        sender: environment.user
+      };
+      const message: Message = new Message(msg);
       this.service.addMessage(message);
     }
   }
