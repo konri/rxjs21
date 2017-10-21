@@ -12,5 +12,6 @@ export const environment = {
     projectId: 'rxjs-dd820',
     storageBucket: 'rxjs-dd820.appspot.com',
     messagingSenderId: '391108301969'
-  }
+  },
+  user: 'Konrad'
 };

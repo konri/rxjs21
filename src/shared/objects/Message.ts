@@ -53,4 +53,5 @@ export class Message {
     public setTimestamp(timestamp: number): void {
         this.timestamp = timestamp;
     }
+
 }

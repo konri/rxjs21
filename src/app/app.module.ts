@@ -6,21 +6,27 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
-import { MessageItemComponent } from '../components/message-item/message-item.component';
+import {MessageItemComponent } from '../components/message-item/message-item.component';
 import {MessageFirebaseService} from '../shared/services/MessageFirebase.service';
-// import {ProductRepository, FireBaseProductRepository} from '../services/MessageService';
-
+import { MessageFormComponent } from '../components/message-form/message-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessageItemComponent
+    MessageItemComponent,
+    MessageFormComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [
       MessageFirebaseService

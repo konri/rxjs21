@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+
+  <mat-form-field >
+    <textarea  rows="10" cols="120" placeholder="Body..." [formControlName]="'body'" class="full">
+    </textarea>
+
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput placeholder="Url" [formControlName]="'imageUrl'" class="full">
+  </mat-form-field>
+
+  <div>
+    <button name="submit" [disabled]="form.invalid" >{{ submitButtonText }}</button>
+  </div>
+</form>
