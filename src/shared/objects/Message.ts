@@ -6,6 +6,7 @@ export class Message {
     private isYoutube: boolean;
     private id: number;
 
+
     private linkRegex = /https?:\/\/[^\s]+/i;
     private ytRegex = /https?:\/\/(?:youtube\.|youtu\.be)[^\s]+/i;
 
@@ -29,12 +30,12 @@ export class Message {
         return this.timestamp;
     }
 
-    public getLinks(): string[] {
-      return this.links;
+    public getLink(): string {
+      return this.link;
     }
 
-    public getVideos(): string[] {
-      return this.videos;
+    public getSsYoutube(): boolean {
+      return this.isYoutube;
     }
 
     public setId(id: number): void {
