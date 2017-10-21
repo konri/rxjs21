@@ -7,6 +7,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import { MessageItemComponent } from '../components/message-item/message-item.component';
+import {MessageFirebaseService} from '../shared/services/MessageFirebase.service';
 // import {ProductRepository, FireBaseProductRepository} from '../services/MessageService';
 
 
@@ -21,7 +22,9 @@ import { MessageItemComponent } from '../components/message-item/message-item.co
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+      MessageFirebaseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
