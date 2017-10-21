@@ -11,12 +11,16 @@ import {MessageFirebaseService} from '../shared/services/MessageFirebase.service
 import { MessageFormComponent } from '../components/message-form/message-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {SideBarComponent} from '../components/side-bar/side-bar.component';
+import {SideItemComponent} from '../components/side-bar/side-item/side-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessageItemComponent,
-    MessageFormComponent
+    MessageFormComponent,
+    SideBarComponent,
+    SideItemComponent
   ],
   imports: [
     BrowserModule,

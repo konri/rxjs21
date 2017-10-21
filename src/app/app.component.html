@@ -1,13 +1,19 @@
-<div>
+<div
+  class="left-side">
 <app-message-item
   *ngFor="let item of items | async"
   [message$]="item"
   [senderId$]="senderId$">
 </app-message-item>
-</div>
 
 <div style="clear:both"> </div>
 
 <app-message-form>
-
 </app-message-form>
+</div>
+<div
+  class="right-side">
+  <app-side-bar>
+  </app-side-bar>
+</div>
+

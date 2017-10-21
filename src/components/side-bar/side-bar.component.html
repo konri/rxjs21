@@ -1,0 +1,21 @@
+<div
+  class="side-bar-container">
+  <h4
+    class="side-bar-title">
+    Last Links
+  </h4>
+  <app-side-item
+    *ngFor="let link of messagesLinks$ | async"
+    [message$]="link"
+    [isLink]="true">
+  </app-side-item>
+  <h4
+    class="side-bar-title">
+    Last Videos
+  </h4>
+  <app-side-item
+    *ngFor="let video of messagesVideos$ | async"
+    [message$]="video"
+    [isLink]="false">
+  </app-side-item>
+</div>
