@@ -15,3 +15,4 @@ import 'rxjs/add/operator/retry';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/takeLast';

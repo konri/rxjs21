@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {AngularFireDatabase} from 'angularfire2/database';
+import {MessageFirebaseService} from '../shared/services/MessageFirebase.service';
+import {Message} from '../shared/objects/Message';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +11,23 @@ import {AngularFireDatabase} from 'angularfire2/database';
 })
 
 export class AppComponent {
-  title = 'app';
   items: Observable<any>;
   senderId$ = 'Test sender 1';
+  message: any;
 
-  constructor(private db: AngularFireDatabase) {
-    this.items = this.db.list('messages').valueChanges();
+  constructor(
+      private mfs: MessageFirebaseService
+  ) {
+    this.items = mfs.getMessages();
+  }
+
+  submit() {
+    const msg = {
+      id: null,
+      body: this.message,
+      timestamp: + new Date(),
+      sender: 'JANEK'
+    };
+    this.mfs.addMessage(new Message(msg)).subscribe(console.log);
   }
 }
