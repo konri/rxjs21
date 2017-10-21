@@ -26,7 +26,7 @@ export class MessageFirebaseService extends MessageFirebaseServiceAbstract {
     }
 
     public addMessage(message: Message): Observable<Message> {
-        return Observable.fromPromise(this.messages.push(message));
+        return Observable.fromPromise(this.messages.push(message.toObject()));
     }
 
     public deleteMessage(message: Message): Observable<void> {
