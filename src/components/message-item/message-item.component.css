@@ -1,0 +1,39 @@
+div {
+  font-family: Helvetica;
+  color: white;
+}
+app-message-item {
+}
+
+.message-container {
+  width: 70%;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.message-body {
+  flex: 4;
+}
+
+.message-sender {
+  flex: 1;
+}
+
+._message-sent {
+  background: #3498db;
+  float: right;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  flex-direction: row-reverse;
+}
+
+._message-received {
+  background: #1abc9c;
+  float: left;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  flex-direction: row;
+}
+
+

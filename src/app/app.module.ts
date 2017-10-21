@@ -6,12 +6,14 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
+import { MessageItemComponent } from '../components/message-item/message-item.component';
 // import {ProductRepository, FireBaseProductRepository} from '../services/MessageService';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MessageItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<div
+  [ngClass]="(message$.sender === senderId$) ? '_message-sent' : '_message-received'"
+  class="message-container">
+  <div
+    class="message-sender">
+    {{ message$.sender }}
+  </div>
+  <div
+    class="message-body">
+    {{ message$.body }}
+  </div>
+</div>

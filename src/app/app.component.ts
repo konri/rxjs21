@@ -11,6 +11,8 @@ import {AngularFireDatabase} from 'angularfire2/database';
 export class AppComponent {
   title = 'app';
   items: Observable<any>;
+  senderId$ = 'Test sender 1';
+
   constructor(private db: AngularFireDatabase) {
     this.items = this.db.list('messages').valueChanges();
   }
