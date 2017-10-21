@@ -8,7 +8,7 @@ export class Message {
 
 
     private linkRegex = /https?:\/\/[^\s]+/i;
-    private ytRegex = /https?:\/\/(?:youtube\.|youtu\.be)[^\s]+/i;
+    private ytRegex = /https?:\/\/(?:www\.)(?:youtube\.|youtu\.be)[^\s]+/i;
 
     constructor(input: any) {
         this.id = input.id || null;
