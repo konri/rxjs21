@@ -55,4 +55,12 @@ export class Message {
         this.timestamp = timestamp;
     }
 
+    public toObject(): any {
+      return {
+        id: this.id,
+        sender: this.sender,
+        timestamp: this.timestamp,
+        body: this.body
+      };
+    }
 }
