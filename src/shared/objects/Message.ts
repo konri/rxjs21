@@ -4,7 +4,7 @@ export class Message {
     private timestamp: number;
     private link: string;
     private isYoutube: boolean;
-    private id: number;
+    private id: string;
 
 
     private linkRegex = /https?:\/\/[^\s]+/i;
@@ -16,7 +16,7 @@ export class Message {
         this.timestamp = timestamp;
     }
 
-    public getId(): number {
+    public getId(): string {
       return this.id;
     }
 
@@ -38,7 +38,7 @@ export class Message {
       return this.isYoutube;
     }
 
-    public setId(id: number): void {
+    public setId(id: string): void {
         this.id = id;
     }
 
