@@ -10,10 +10,11 @@ export class Message {
     private linkRegex = /https?:\/\/[^\s]+/i;
     private ytRegex = /https?:\/\/(?:youtube\.|youtu\.be)[^\s]+/i;
 
-    constructor(sender: string, body: string, timestamp: number) {
-        this.sender = sender;
-        this.body = body;
-        this.timestamp = timestamp;
+    constructor(input: any) {
+        this.id = input.id || null;
+        this.sender = input.sender;
+        this.timestamp = input.timestamp;
+        this.setBody(input.body);
     }
 
     public getId(): string {
