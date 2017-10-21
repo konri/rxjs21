@@ -1,7 +1,13 @@
-
+<div>
 <app-message-item
   *ngFor="let item of items | async"
   [message$]="item"
   [senderId$]="senderId$">
 </app-message-item>
+</div>
 
+<div style="clear:both"> </div>
+
+<app-message-form>
+
+</app-message-form>
